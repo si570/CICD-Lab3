@@ -1,6 +1,6 @@
 package atu.ie.lab3.service;
 
-import ie.atu.passenger.model.Passenger;
+import atu.ie.lab3.model.Passenger;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -36,7 +36,6 @@ public class PassengerService {
             passenger.setEmail(updatedPassenger.getEmail());
             return Optional.of(passenger);
         }
-
         return Optional.empty();
     }
 
@@ -44,4 +43,3 @@ public class PassengerService {
         return passengers.removeIf(p -> p.getId().equals(id));
     }
 }
-
